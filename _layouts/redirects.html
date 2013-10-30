@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    {% if page.id == "90euoldblog" %}
+    <meta http-equiv="Refresh" content="1; url=http://universe.90edges.com/post/{{ page.newurl }}" />
+    {% endif %}
+    {% if page.id == "90euoldhomepage" %}
+    <meta http-equiv="Refresh" content="1; url={{ page.newurl }}" />
+    {% endif %}
+    <title>{{ page.title }}</title>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37365535-1']);
+  _gaq.push(['_addIgnoredRef', '.90edges.com']);
+  _gaq.push(['_setDomainName', '.90edges.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+    {% if page.id == "90euoldblog" %}
+    Redirecting to <a href="http://universe.90edges.com/post/{{ page.newurl }}">http://universe.90edges.com/post/{{ page.newurl }}</a>
+    {% endif %}
+    {% if page.id == "90euoldhomepage" %}
+    Redirecting to <a href="{{ page.newurl }}">{{ page.newurl }}</a>
+    {% endif %}
+</body>
+</html>
